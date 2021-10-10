@@ -37,6 +37,8 @@ public class ChatEndPoint {
         String message = MessageUtils.getMessage(true,null,getNames());
         broadcastAllUsers(message);
     }
+
+
     //获取当前登录的用户
     private Set<String> getNames(){
         return onLineUsers.keySet();

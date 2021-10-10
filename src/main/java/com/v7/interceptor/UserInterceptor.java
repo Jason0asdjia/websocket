@@ -11,12 +11,18 @@ import javax.servlet.http.HttpSession;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+/*
+ * @Author v7
+ * @Description  没用数据库，暂且用集合来存储已登录等用户，进行拦截。
+ * @Date 17:48 10/10/2021
+ * @Param
+ * @return
+ **/
+
 @Component
 public class UserInterceptor implements HandlerInterceptor {
-    //没用数据库，暂且用集合来存储已登录等用户，进行拦截。
+
     public static Map<String, String> onLineUsers = new ConcurrentHashMap<>();;
-
-
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
